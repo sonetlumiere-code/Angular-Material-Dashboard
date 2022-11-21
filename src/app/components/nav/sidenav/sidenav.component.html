@@ -1,0 +1,28 @@
+<mat-sidenav-container [hasBackdrop]="false">
+
+    <mat-sidenav 
+        #sidenav [mode]="windowInnerWidth > 1200 ? 'side' : 'push'" 
+        [opened]="windowInnerWidth > 1200 ? true : false" 
+        disableClose="true">
+        <h2>Material</h2>
+        <mat-divider></mat-divider>
+        <mat-nav-list>
+            <mat-list-item 
+                *ngFor="let menuItem of menuItems" 
+                routerLinkActive="active" 
+                (click)="windowInnerWidth < 1200 ? sidenav.close() : null"
+                [routerLink]="[menuItem.path]">
+                <mat-icon mat-list-icon *ngIf="menuItem.icon" class="">{{menuItem.icon}}</mat-icon>
+                <span>{{menuItem.title}}</span>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <app-toolbar [windowInnerWidth]="windowInnerWidth" (toggleEvent)="toggleSidenav()"></app-toolbar>
+        <div class="router-outlet-container">
+            <router-outlet></router-outlet>
+        </div>     
+    </mat-sidenav-content>
+  
+</mat-sidenav-container>

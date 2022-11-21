@@ -1,0 +1,38 @@
+mat-sidenav-container {
+    height: 100%
+}
+
+mat-sidenav {
+    padding: 16px;
+}
+
+mat-sidenav{
+    width: 300px;
+}
+
+.mat-sidenav {
+    box-shadow: none;
+}
+
+.router-outlet-container {
+    padding: 40px;
+}
+
+@media (max-width: 375px) {
+    mat-sidenav{
+        width: 220px;
+    }
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c2c2c;
+    padding: 0 16px;
+}
+
+@media (max-width: 600px) {
+    h2 {
+        margin-bottom: 8px;
+    }
+}

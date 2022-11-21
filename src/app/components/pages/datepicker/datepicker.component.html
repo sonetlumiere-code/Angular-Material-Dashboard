@@ -1,0 +1,24 @@
+<!--min & max-->
+<mat-form-field>
+    <input matInput [matDatepicker]="myDatePicker" [min]="minDate" [max]="maxDate">
+    <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #myDatePicker></mat-datepicker>
+</mat-form-field>
+
+<br>
+
+<!--filter saturdays and sundays-->
+<mat-form-field>
+    <input matInput [matDatepicker]="myDatePicker2" [matDatepickerFilter]="dateFilter">
+    <mat-datepicker-toggle [for]="myDatePicker2" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #myDatePicker2></mat-datepicker>
+</mat-form-field>
+
+<br>
+
+<!--startView Year-->
+<mat-form-field>
+    <input matInput [matDatepicker]="myDatePicker3">
+    <mat-datepicker-toggle [for]="myDatePicker3" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #myDatePicker3 startView="year"></mat-datepicker>
+</mat-form-field>

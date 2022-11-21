@@ -1,0 +1,42 @@
+<mat-toolbar color="white" class="navbar">
+
+    <div>
+        <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="toggleSidenav()"
+        *ngIf="windowInnerWidth < 1200">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>  
+        </button>
+        <span class="">{{getTitle()}}</span>
+    </div>
+    
+    <div *ngIf="windowInnerWidth > 991">
+        <span>Home</span>
+        <span>About</span>
+        <span>Services</span>
+    </div>
+
+    <div *ngIf="windowInnerWidth <= 991">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Home</span>
+        </button>
+        <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>About</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Services</span>
+        </button>
+        </mat-menu>
+    </div>
+    
+</mat-toolbar>
+<mat-divider></mat-divider>

@@ -1,0 +1,38 @@
+
+<!--
+    completed="true"
+    completed="false"
+    completed="optional"
+-->
+
+<mat-horizontal-stepper linear>
+    <mat-step label= "Shipping Adress" completed="true">
+        <p>Shipping Adress Details</p>
+    </mat-step>
+    <mat-step label= "Billing Address" completed="false">
+        <p>Billing Address Details</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label= "Place Order" completed="false">
+        <p>Order Details</p>
+    </mat-step>
+</mat-horizontal-stepper>
+
+<mat-vertical-stepper linear>
+    <mat-step label= "Shipping Adress" completed="true">
+        <p>Shipping Adress Details</p>
+    </mat-step>
+    <mat-step label= "Billing Address" completed="false">
+        <p>Billing Address Details</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label= "Place Order" completed="false">
+        <p>Order Details</p>
+    </mat-step>
+</mat-vertical-stepper>
