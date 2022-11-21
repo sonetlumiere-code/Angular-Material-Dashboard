@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Location} from '@angular/common';
 import { sidenavRoutes } from '../sidenav/sidenav.component';
+import { ThemeService } from 'src/app/services/theme/theme.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -13,19 +14,26 @@ export class ToolbarComponent implements OnInit {
   @Output() toggleEvent = new EventEmitter<string>();
   menuItems: any[] = [];
   location: Location;
+  isDarkTheme: boolean = false;
 
   constructor(
     location: Location,
+    private themeService: ThemeService
   ) { 
     this.location = location;
   }
 
   ngOnInit(): void {
+    this.themeService.isDarkTheme.subscribe(darkTheme => this.isDarkTheme = darkTheme);
     this.menuItems = sidenavRoutes.filter(listTitle => listTitle);
   }
 
   toggleSidenav(): void {
     this.toggleEvent.emit();
+  }
+
+  toggleDarkTheme(checked: boolean) {
+    this.themeService.setDarkTheme(checked);
   }
 
   getTitle() {

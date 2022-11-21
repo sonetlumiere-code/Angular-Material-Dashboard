@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from './services/theme/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  //title = 'ng-material';
+  isDarkTheme: boolean = false;
+
+  constructor(
+    private themeService: ThemeService
+    ) {}
+
+  ngOnInit(): void {
+    this.themeService.isDarkTheme.subscribe(darkTheme => this.isDarkTheme = darkTheme);
+  }
 
 }

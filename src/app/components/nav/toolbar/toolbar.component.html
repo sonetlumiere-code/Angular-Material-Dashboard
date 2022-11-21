@@ -1,5 +1,4 @@
 <mat-toolbar color="white" class="navbar">
-
     <div>
         <button
         type="button"
@@ -12,31 +11,39 @@
         <span class="">{{getTitle()}}</span>
     </div>
     
+    <div class="flex-stretch"></div>
     <div *ngIf="windowInnerWidth > 991">
         <span>Home</span>
         <span>About</span>
         <span>Services</span>
     </div>
 
+    <mat-icon *ngIf="!isDarkTheme" class="mr-8">bedtime</mat-icon>
+    <mat-icon *ngIf="isDarkTheme" class="mr-8">brightness_7</mat-icon>
+    <mat-slide-toggle 
+        [checked]="isDarkTheme" 
+        (change)="toggleDarkTheme($event.checked)" 
+        class="mr-8">
+    </mat-slide-toggle>
+    
     <div *ngIf="windowInnerWidth <= 991">
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu">
             <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-            <mat-icon>dialpad</mat-icon>
-            <span>Home</span>
-        </button>
-        <button mat-menu-item disabled>
-            <mat-icon>voicemail</mat-icon>
-            <span>About</span>
-        </button>
-        <button mat-menu-item>
-            <mat-icon>notifications_off</mat-icon>
-            <span>Services</span>
-        </button>
+            <button mat-menu-item>
+                <mat-icon>dialpad</mat-icon>
+                <span>Home</span>
+            </button>
+            <button mat-menu-item disabled>
+                <mat-icon>voicemail</mat-icon>
+                <span>About</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>notifications_off</mat-icon>
+                <span>Services</span>
+            </button>
         </mat-menu>
     </div>
-    
 </mat-toolbar>
 <mat-divider></mat-divider>
