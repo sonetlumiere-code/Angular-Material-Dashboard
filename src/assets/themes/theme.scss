@@ -1,10 +1,12 @@
+@use '@angular/material' as mat;
 @import '~@angular/material/theming';
 @include mat-core();
+
 //@import 'indigo-pink';
 @import 'theme1';
 //@import 'theme2';
 
-$theme: mat-light-theme((
+$light-theme: mat-light-theme((
     color: (
         primary: $primary,
         accent: $accent,
@@ -20,10 +22,10 @@ $dark-theme: mat-dark-theme((
     )
 ));
 
-@include angular-material-theme($theme);
+@include mat.all-component-themes($light-theme);
 
 .darkMode {
-    @include angular-material-theme($dark-theme);
+    @include mat.all-component-colors($dark-theme);
 }
 
 // Palette generator:
