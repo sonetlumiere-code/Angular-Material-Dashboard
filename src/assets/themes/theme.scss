@@ -1,0 +1,30 @@
+@import '~@angular/material/theming';
+@include mat-core();
+//@import 'indigo-pink';
+@import 'theme1';
+//@import 'theme2';
+
+$theme: mat-light-theme((
+    color: (
+        primary: $primary,
+        accent: $accent,
+        warn: $warn
+    )
+));
+
+$dark-theme: mat-dark-theme((
+    color: (
+        primary: $primary,
+        accent: $accent,
+        warn: $warn
+    )
+));
+
+@include angular-material-theme($theme);
+
+.darkMode {
+    @include angular-material-theme($dark-theme);
+}
+
+// Palette generator:
+// http://mcg.mbitson.com/

@@ -1,0 +1,105 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$primary-color: (
+    50 : #f6f1e1,
+    100 : #e7dbb5,
+    200 : #d8c384,
+    300 : #c8ab53,
+    400 : #bc992e,
+    500 : #b08709,
+    600 : #a97f08,
+    700 : #a07406,
+    800 : #976a05,
+    900 : #875702,
+    A100 : #ffe0b3,
+    A200 : #ffcb80,
+    A400 : #ffb64d,
+    A700 : #ffab34,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$accent-color: (
+    50 : #e1e3eb,
+    100 : #b5b9ce,
+    200 : #848aad,
+    300 : #525b8c,
+    400 : #2d3773,
+    500 : #08145a,
+    600 : #071252,
+    700 : #060e48,
+    800 : #040b3f,
+    900 : #02062e,
+    A100 : #676dff,
+    A200 : #343cff,
+    A400 : #010aff,
+    A700 : #0009e6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$warn-color: (
+    50 : #e8f4f7,
+    100 : #c6e4eb,
+    200 : #a0d3dd,
+    300 : #7ac1cf,
+    400 : #5eb3c5,
+    500 : #41a6bb,
+    600 : #3b9eb5,
+    700 : #3295ac,
+    800 : #2a8ba4,
+    900 : #1c7b96,
+    A100 : #cff3ff,
+    A200 : #9ce7ff,
+    A400 : #69dbff,
+    A700 : #4fd5ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$primary: mat-palette($primary-color);
+$accent: mat-palette($accent-color);
+$warn: mat-palette($warn-color);
