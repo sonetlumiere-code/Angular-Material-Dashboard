@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-gridlist',
   templateUrl: './gridlist.component.html',
   styleUrls: ['./gridlist.component.scss']
 })
-export class GridlistComponent implements OnInit {
+export class GridlistComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

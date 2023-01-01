@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-progressspinner',
@@ -9,14 +9,14 @@ export class ProgressspinnerComponent implements OnInit {
 
   constructor() { }
 
-  showSpinner = false;
+  showSpinner = false
 
   ngOnInit(): void {
-    this.loadData();
+    this.loadData()
   }
 
   loadData(){
-    this.showSpinner = true;
+    this.showSpinner = true
     setTimeout(() => this.showSpinner = false, 3000)
   }
 

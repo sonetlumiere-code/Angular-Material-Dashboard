@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core'
+import { FormControl } from '@angular/forms'
+import { Observable } from 'rxjs'
+import { map, startWith } from 'rxjs/operators'
 
 @Component({
   selector: 'app-autocomplete',
@@ -10,17 +10,17 @@ import { map, startWith } from 'rxjs/operators';
 })
 export class AutocompleteComponent implements OnInit {
 
-  options: string[] = ['Angular', 'React', 'Vue'];
+  options: string[] = ['Angular', 'React', 'Vue']
 
   objectOptions = [
     { name: 'Angular' },
     { name: 'Angular Material' },
     { name: 'React' },
     { name: 'Vue' }
-  ];
+  ]
 
-  myControl = new FormControl();
-  filteredOptions!: Observable<string[]>;
+  myControl = new FormControl()
+  filteredOptions!: Observable<string[]>
 
   constructor() { }
 
@@ -32,7 +32,7 @@ export class AutocompleteComponent implements OnInit {
   }
 
   private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
+    const filterValue = value.toLowerCase()
     return this.options.filter(option => option.toLowerCase().includes(filterValue))
   }
 
